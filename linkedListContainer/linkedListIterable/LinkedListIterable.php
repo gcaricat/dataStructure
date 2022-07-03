@@ -3,6 +3,9 @@
 namespace dataStructure\linkedList;
 
 use PHPUnit\DbUnit\Operation\Exception;
+//use dataStructure\linkedList\ListNode;
+
+include "../linkedList/ListNode.php";
 //use Iterator;
 
 class LinkedListIterable implements \Iterator
@@ -31,7 +34,6 @@ class LinkedListIterable implements \Iterator
 			while($currentNode->getNext() !== NULL){
 				$currentNode = $currentNode->getNext();
 			}
-			//$currentNode->next = $newNode;
 			$currentNode->setNext($newNode);
 		}
 
@@ -234,6 +236,10 @@ class LinkedListIterable implements \Iterator
 		return FALSE;
 	}
 
+	public function getSize(){
+		return $this->_totalNodes;
+	}
+
 	public function reverse(){
 
 		if($this->_head && $this->_head->getNext()){
@@ -281,13 +287,11 @@ class LinkedListIterable implements \Iterator
 	/**
 	 *
 	 */
-	public function next()
+	public function next(): void
 	{
-//		if($this->_currentNode->getNext() == null)
 
 		$this->_currentPosition++;
 		$this->_currentNode = $this->_currentNode->getNext();
-
 
 	}
 
@@ -299,12 +303,12 @@ class LinkedListIterable implements \Iterator
 		return $this->_currentPosition;
 	}
 
-	public function valid()
+	public function valid():bool
 	{
 		return isset($this->_currentNode);
 	}
 
-	public function rewind()
+	public function rewind():void
 	{
 		$this->_currentPosition = 0;
 		$this->_currentNode = $this->_head;

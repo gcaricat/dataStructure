@@ -1,8 +1,9 @@
 <?php
+	namespace dataStructure\linkedList;
 
-	use dataStructure\linkedList\LinkedListIterable;
-	use dataStructure\linkedList\ListNode;
-	require "LinkedList.php";
+//	use dataStructure\linkedList\LinkedListIterable;
+//	use dataStructure\linkedList\ListNode;
+	require "LinkedListIterable.php";
 	require "ListNode.php";
 
 

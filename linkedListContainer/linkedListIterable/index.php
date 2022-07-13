@@ -1,10 +1,11 @@
 <?php
-	namespace dataStructure\linkedList;
 
-//	use dataStructure\linkedList\LinkedListIterable;
-//	use dataStructure\linkedList\ListNode;
-	require "LinkedListIterable.php";
-	require "ListNode.php";
+	namespace dataStructure\linkedListIterable;
+
+	use dataStructure\linkedListIterable\ListNode;
+	use dataStructure\linkedListIterable\LinkedListIterable;
+	include_once "LinkedListIterable.php";
+	include_once "ListNode.php";
 
 
 	$bookTitles = new LinkedListIterable();

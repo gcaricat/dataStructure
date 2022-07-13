@@ -1,12 +1,13 @@
 <?php
 
-namespace dataStructure\linkedList;
+namespace dataStructure\linkedListIterable;
 
+use dataStructure\linkedListIterable\ListNode;
+include_once "ListNode.php";
+
+//use dataStructure\linkedListIterable;
 use PHPUnit\DbUnit\Operation\Exception;
-//use dataStructure\linkedList\ListNode;
 
-include "../linkedList/ListNode.php";
-//use Iterator;
 
 class LinkedListIterable implements \Iterator
 {
@@ -264,6 +265,7 @@ class LinkedListIterable implements \Iterator
 	 */
 	public function getNthNode(int $n = 0): ?ListNode{
 		$count = 1;
+		$currentNode = null;
 		if($this->_head && $n <= $this->_totalNodes){
 			$currentNode = $this->_head;
 			while ($currentNode){
@@ -274,6 +276,7 @@ class LinkedListIterable implements \Iterator
 				$currentNode = $currentNode->getNext();
 			}
 		}
+		return $currentNode;
 	}
 
 	/**

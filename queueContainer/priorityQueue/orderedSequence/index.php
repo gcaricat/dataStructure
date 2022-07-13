@@ -1,13 +1,18 @@
 <?php
 
-class ListNode {
-	public $data = NULL;
-	public $next = NULL;
-	public $priority = NULL;
+use dataStructure\queueContainer\priorityQueue\orderedSequence\AgentQueue;
+include "AgentQueue.php";
 
-	public function __construct(string $data = NULL, int $priority = NULL)
-	{
-		$this->data = $data;
-		$this->priority = $priority;
-	}
+try {
+	$agents = new AgentQueue();
+	$agents->enqueue("Anna", 1);
+	$agents->enqueue("Laura", 2);
+	$agents->enqueue("Rosa", 1);
+	$agents->enqueue("Maria", 3);
+	$agents->enqueue("Gianna", 4);
+	$agents->display();
+	echo $agents->dequeue();
+	$agents->display();
+}catch (Exception $e){
+	echo $e->getMessage();
 }

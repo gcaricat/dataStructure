@@ -1,6 +1,6 @@
 <?php
 
-namespace dataStructure\linkedList;
+namespace dataStructure\linkedListIterable;
 
 class ListNode
 {

@@ -3,7 +3,7 @@
 use dataStructure\doubleLinkedList\DoubleLinkedList;
 use dataStructure\doubleLinkedList\ListNode;
 require "ListNode.php";
-require "doubleLinkedList.php";
+require "DoubleLinkedList.php";
 
 $bootTitles = new DoubleLinkedList();
 $bootTitles->insertAtFirst("Pippo");

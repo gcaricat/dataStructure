@@ -1,6 +1,6 @@
 <?php
 
-	namespace dataStructure\stackInterface;
+	namespace dataStructure\stackLinkedList;
 
 	interface Stack {
 		public function push(string $item);

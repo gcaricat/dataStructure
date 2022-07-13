@@ -11,7 +11,7 @@ class ListNode{
 	private ?string $data;
 
 	/**
-	 * @var \dataStructure\linkedList\ListNode|null
+	 * @var \dataStructure\linkedListIterable\ListNode|null
 	 */
 	private ?ListNode $next = null;
 
